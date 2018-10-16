@@ -1,4 +1,7 @@
 server:
+  servlet:
+    session:
+      timeout: 3000
   port: 8081
 
 logging:

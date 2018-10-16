@@ -1,4 +1,8 @@
+# 配置dev 环境连续60秒没有进行操作即为超时
 server:
+  servlet:
+    session:
+      timeout: 60
   port: 8080
 
 logging:

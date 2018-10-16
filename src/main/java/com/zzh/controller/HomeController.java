@@ -52,4 +52,9 @@ public class HomeController {
         return "yes";
     }
 
+    @GetMapping("/login/timeout")
+    public String timeOut(){
+        return "请重新登陆";
+    }
+
 }

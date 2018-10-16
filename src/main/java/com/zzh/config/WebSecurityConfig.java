@@ -72,6 +72,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 //.antMatchers("/user/**").hasRole("USER")//不使用注解也可以在这里配置 /user/以下的 路径 都需要USER权限
                 //.antMatchers("/user").hasRole("USER")//   /user路径需要USER权限
 //                .anyRequest().authenticated()//其余的所有请求都需要验证
+                .and().sessionManagement().invalidSessionUrl("/login/timeout")//用户失效访问的地址
                 .and()
                 .formLogin().loginPage("/mylogin").defaultSuccessUrl("/user")//自定义 登录页面的地址  登录成功后的地址
                 .and()

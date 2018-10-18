@@ -39,7 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     }
 
     /**
-     * 忽略的路径
+     * 忽略的路径  web.ignoring() 和.permitAll()的区别
      * @param web
      * @throws Exception
      */
@@ -53,9 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .antMatchers("/content/**")
                 .antMatchers("/swagger-ui/index.html")
                 .antMatchers("/test/**")
-                .antMatchers("/h2-console/**")
-//                .antMatchers("/user/**")
-                .antMatchers("/mylogin");
+                .antMatchers("/h2-console/**");
     }
     /**
      * 匹配 "/", "/index", "/mylogin", "/register" 路径，不需要权限即可访问
